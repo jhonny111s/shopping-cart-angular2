@@ -1,0 +1,9 @@
+<h3>Libros de Google Book</h3>
+<div class="grid grid-pad">
+  <div *ngFor="let book of products.items" class="col-1-4">
+    <div class="module hero">
+      <h4>{{book.volumeInfo.title}}</h4>
+      {{book.volumeInfo.description}}
+    </div>
+  </div>
+</div>
