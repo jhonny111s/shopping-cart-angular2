@@ -9,9 +9,15 @@ import { HttpModule }    from '@angular/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 //import { InMemoryDataService }  from './in-memory-data.service';
 
+//Services
+import { ProductService }    from './Services/product.service';
+import { ShopCartService }    from './Services/shop-cart.service';
+
+//Components
 import { AppComponent }         from './app.component';
 import { ProductsComponent }    from './products.component';
-import { ProductService }    from './product.service';
+import { MenuComponent }        from './menu.component';
+import { CartComponent }        from './cart.component';
 
 @NgModule({
   imports: [
@@ -28,16 +34,19 @@ import { ProductService }    from './product.service';
       {
         path: 'products',
         component: ProductsComponent
-      }
+      },
     ])
   ],
   declarations: [
     AppComponent,
-    ProductsComponent
+    ProductsComponent,
+    MenuComponent,
+    CartComponent
   ],
 
   providers: [
-    ProductService
+    ProductService,
+    ShopCartService
   ],
   bootstrap: [AppComponent]
 })
